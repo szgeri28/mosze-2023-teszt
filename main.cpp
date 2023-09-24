@@ -1,24 +1,23 @@
 #include <iostream>
-
 constexpr int N_ELEMENTS = 100;
 
 int main()
 {
-    int *b = new int[NELEMENTS]; //[N_ELEMENTS]
-    std::cout << '1-100 ertekek duplazasa' //Hianyzik a ; végérõl és "" közé kellett volna írni
-    for (int i = 0;) //Hiányos a for ciklus
+    int *b = new int[N_ELEMENTS];
+    std::cout << "1-100 ertekek duplazasa";
+    for (int i = 1; i <= N_ELEMENTS; i++)
     {
-        b[i] = i * 2; // b[i] helyett b[i-1] kéne írni
+        b[i - 1] = i * 2;
     }
-    for (int i = 0; i; i++) //0-tol 0-ig megy? ez igy nem jo
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        std::cout << "Ertek:" //Hianyzo értek és nincs endl hogy jól nézzen ki
-    }    
+        std::cout << "Ertek: " << b[i] << " ";
+    }
     std::cout << "Atlag szamitasa: " << std::endl;
     int atlag;
-    for (int i = 0; i < N_ELEMENTS, i++) // , helyett ; kell írni
+    for (int i = 0; i < N_ELEMENTS; i++)
     {
-        atlag += b[i] // Itt is hiányzik ;
+        atlag += b[i];
     }
     atlag /= N_ELEMENTS;
     std::cout << "Atlag: " << atlag << std::endl;
