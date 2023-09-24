@@ -23,5 +23,7 @@ int main()
     std::cout << "Atlag: " << atlag << std::endl;
 
     std::cout << "szia geri beni voltam" << std::endl;
+
+    std::cout << "szia geri beni voltam megint mert az elobb nem tudtad elfogadni a pull requestemet" << std::endl;
     return 0;
 }
